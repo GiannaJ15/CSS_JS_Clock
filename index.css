@@ -1,0 +1,14 @@
+.hand{
+  width: 50%;
+  height: 6px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s
+}
+
+
+/* The transformation origin is the point at which the div is rotating. In this case, we want the hand of the clock to rotate in the middle of the clock, which is the far right of the hand div.  */
+/* Also, since divs are blocks that start left to right, the hands are not starting at 12 o'clock, they are starting at 9. So we can just rotate the whole div 90 degrees to make the hands start at 12. */
