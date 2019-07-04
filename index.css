@@ -1,14 +1,76 @@
 .hand{
-  width: 50%;
-  height: 6px;
-  background: black;
   position: absolute;
+  width: 50%;
+  height: .1rem;
+  /* background: white; */
   top: 50%;
   transform-origin: 100%;
   transform: rotate(90deg);
-  transition: all 0.05s
+  transition: all 0.05s;
+  padding:5px
+}
+
+
+.second-hand{
+  background: green;
+  height: 1px !important
+}
+
+.min-hand{
+  background: blue;
+}
+
+.hour-hand{
+  background: yellow;
 }
 
 
 /* The transformation origin is the point at which the div is rotating. In this case, we want the hand of the clock to rotate in the middle of the clock, which is the far right of the hand div.  */
 /* Also, since divs are blocks that start left to right, the hands are not starting at 12 o'clock, they are starting at 9. So we can just rotate the whole div 90 degrees to make the hands start at 12. */
+
+html{
+  text-align: center;
+  background: black;
+}
+
+body{
+  font-size: 2rem;
+  display:flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.clock {
+   border: 3px solid white;
+   border-width: thick;
+   border-radius: 50%;
+   width: 30rem;
+   height: 30rem;
+   position: relative;
+   box-shadow:
+  0 0 0 4px rgba(0,0,0,0.1),
+  inset 0 0 0 3px #EFEFEF,
+  inset 0 0 10px black,
+  0 0 10px rgba(0,0,0,0.2);
+  }
+
+
+.clock-face{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.button{
+  font-size: 40px;
+  background-color: transparent;
+  color: white;
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 28px;
+  animation: strobe
+}
